@@ -8,7 +8,9 @@ This is a static HTML website showcasing Thahab Capital's real estate projects, 
 
 ## 🌐 Live Demo
 
-[Add your Vercel deployment URL here]
+**Production:** https://thahab-capital-testing-eic2.vercel.app/
+
+**GitHub Repository:** https://github.com/lebombastic/thahab-capital-testing
 
 ## ✨ Features
 
