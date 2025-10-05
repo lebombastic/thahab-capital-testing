@@ -1,21 +1,22 @@
 /* CONTENT SECTIONS - MODERN VARIANT */
 
-[data-content-variant="modern"] .about-one,
-[data-content-variant="modern"] .about-three,
-[data-content-variant="modern"] .counter-one,
-[data-content-variant="modern"] .why-choose-one,
-[data-content-variant="modern"] .brand-one,
-[data-content-variant="modern"] .brand-two,
-[data-content-variant="modern"] .apartment-one,
-[data-content-variant="modern"] .apartments-two-page,
-[data-content-variant="modern"] .apartment-details-one,
-[data-content-variant="modern"] .apartment-details-two,
-[data-content-variant="modern"] .testimonial-one,
-[data-content-variant="modern"] .testimonial-two,
-[data-content-variant="modern"] .cta-one,
-[data-content-variant="modern"] .cta-three,
-[data-content-variant="modern"] .news-one,
-[data-content-variant="modern"] .floor-plan {
+/* Apply to sections with data-content-variant="modern" */
+.about-one[data-content-variant="modern"],
+.about-three[data-content-variant="modern"],
+.counter-one[data-content-variant="modern"],
+.why-choose-one[data-content-variant="modern"],
+.brand-one[data-content-variant="modern"],
+.brand-two[data-content-variant="modern"],
+.apartment-one[data-content-variant="modern"],
+.apartments-two-page[data-content-variant="modern"],
+.apartment-details-one[data-content-variant="modern"],
+.apartment-details-two[data-content-variant="modern"],
+.testimonial-one[data-content-variant="modern"],
+.testimonial-two[data-content-variant="modern"],
+.cta-one[data-content-variant="modern"],
+.cta-three[data-content-variant="modern"],
+.news-one[data-content-variant="modern"],
+.floor-plan[data-content-variant="modern"] {
   --section-padding-y: 100px;
   --card-padding: 36px;
   --card-gap: 24px;
@@ -27,21 +28,22 @@
   padding: var(--section-padding-y) 0;
 }
 
+/* Card styling within modern variant sections */
 [data-content-variant="modern"] .apartment-one__single,
 [data-content-variant="modern"] .counter-one__single,
 [data-content-variant="modern"] .testimonial-one__single,
 [data-content-variant="modern"] .card {
-  padding: var(--card-padding);
-  gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border: var(--card-border);
   border-radius: var(--card-radius);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(244, 228, 179, 0.05) 100%);
+  transition: all 0.3s ease;
 }
 
+/* Hover effects - careful not to break grid layout */
 [data-content-variant="modern"] .apartment-one__single:hover,
 [data-content-variant="modern"] .card:hover {
-  transform: translateY(var(--card-hover-lift)) scale(1.02);
+  transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(212, 175, 55, 0.25);
 }
 
@@ -60,10 +62,10 @@
 }
 
 @media (max-width: 768px) {
-  [data-content-variant="modern"] .about-one,
-  [data-content-variant="modern"] .apartment-one,
-  [data-content-variant="modern"] .counter-one {
+  .about-one[data-content-variant="modern"],
+  .apartment-one[data-content-variant="modern"],
+  .apartments-two-page[data-content-variant="modern"],
+  .counter-one[data-content-variant="modern"] {
     --section-padding-y: 60px;
-    --card-padding: 24px;
   }
 }

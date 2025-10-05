@@ -7,9 +7,14 @@ class InlineSectionSwitcher {
   constructor() {
     // Section configuration with categories
     this.sectionConfig = {
+      // Header
       '.main-header': { category: 'header', name: 'الرأس' },
+
+      // Hero/Banner sections
       '.main-slider': { category: 'hero', name: 'البانر الرئيسي' },
       '.page-header': { category: 'hero', name: 'رأس الصفحة' },
+
+      // Content sections
       '.about-one': { category: 'content', name: 'من نحن' },
       '.about-three': { category: 'content', name: 'من نحن' },
       '.counter-one': { category: 'content', name: 'الإحصائيات' },
@@ -22,9 +27,21 @@ class InlineSectionSwitcher {
       '.testimonial-two': { category: 'content', name: 'التوصيات' },
       '.cta-one': { category: 'content', name: 'دعوة للعمل' },
       '.floor-plan': { category: 'content', name: 'المخططات' },
+      '.services-one': { category: 'content', name: 'الخدمات' },
+      '.blog-one': { category: 'content', name: 'المدونة' },
+      '.brand-one': { category: 'content', name: 'الشركاء' },
+
+      // Cards (develop2.html specific)
+      '.cards-container': { category: 'content', name: 'البطاقات' },
+
+      // Gallery sections
       '.gallery-one': { category: 'gallery', name: 'المعرض' },
+
+      // Forms
       '.contact-one': { category: 'forms', name: 'نموذج التواصل' },
       '.contact-page': { category: 'forms', name: 'صفحة التواصل' },
+
+      // Footer
       '.site-footer': { category: 'footer', name: 'التذييل' }
     };
 
@@ -188,18 +205,22 @@ class InlineSectionSwitcher {
   }
 
   applyVariantToSection(switcher, variant, category) {
-    const section = switcher.closest('section, header, footer');
+    const section = switcher.closest('section, header, footer, .cards-container');
     if (!section) return;
 
+    // Remove all previous variant attributes from this section
     this.variants.forEach(v => {
       section.classList.remove(`variant-${v.id}`);
       section.removeAttribute(`data-variant-${v.id}`);
+      section.removeAttribute(`data-${category}-variant`);
     });
 
+    // Apply new variant to THIS SECTION ONLY
     section.classList.add(`variant-${variant}`);
     section.setAttribute('data-variant', variant);
     section.setAttribute(`data-${category}-variant`, variant);
-    document.body.setAttribute(`data-${category}-variant`, variant);
+
+    // DO NOT apply to body - this breaks per-section independence
   }
 }
 

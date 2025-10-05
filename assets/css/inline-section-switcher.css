@@ -54,7 +54,8 @@ footer.site-footer {
 .inline-switcher__menu {
   position: absolute;
   top: 50px;
-  left: 0;
+  left: auto;
+  right: 0; /* Opens to the RIGHT */
   background: white;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
@@ -224,6 +225,12 @@ footer.site-footer {
 .contact-page .inline-switcher {
   top: -50px;
   left: 20px;
+}
+
+/* Cards container (develop2.html) - top positioning */
+.cards-container .inline-switcher {
+  top: 30px;
+  left: 30px;
 }
 
 /* ===== TOOLTIP ON HOVER ===== */
