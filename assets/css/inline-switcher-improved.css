@@ -1,0 +1,49 @@
+/* Better contrast inline switcher - append to existing */
+
+.inline-switcher {
+  opacity: 0.5;
+}
+
+.inline-switcher__toggle {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #d4af37 0%, #b8941e 100%) !important;
+  border: 3px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(212, 175, 55, 0.15) !important;
+}
+
+.inline-switcher__menu {
+  min-width: 200px !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+.inline-switcher__option {
+  padding: 14px !important;
+  border: 2px solid transparent !important;
+}
+
+.inline-switcher__option.active {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(244, 228, 179, 0.15) 100%) !important;
+  border-color: rgba(212, 175, 55, 0.4) !important;
+}
+
+.inline-switcher__option-text strong {
+  font-size: 15px !important;
+  color: #1a1a1a !important;
+}
+
+.inline-switcher__option.active .inline-switcher__option-text strong {
+  color: #b8941e !important;
+}
+
+.inline-switcher__option-text small {
+  font-size: 12px !important;
+  color: #666 !important;
+}
+
+.inline-switcher__label {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+}

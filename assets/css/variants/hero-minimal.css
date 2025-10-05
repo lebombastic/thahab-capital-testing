@@ -1,19 +1,22 @@
-/* HERO - MINIMAL VARIANT */
+/* ============================================
+   HERO - MINIMAL VARIANT
+   Centered, generous whitespace, typography focus
+   ============================================ */
 
 [data-hero-variant="minimal"] .main-slider,
 [data-hero-variant="minimal"].main-slider,
 [data-hero-variant="minimal"] .page-header,
 [data-hero-variant="minimal"].page-header {
-  --hero-height: 70vh;
-  --hero-overlay: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
-  --title-size: var(--font-size-3xl);
-  --title-weight: 300;
-  --title-spacing: 0.05em;
-
-  min-height: var(--hero-height);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
+/* Subtle overlay */
 [data-hero-variant="minimal"] .main-slider::before,
 [data-hero-variant="minimal"] .page-header::before {
   content: '';
@@ -22,33 +25,62 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--hero-overlay);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
   z-index: 1;
 }
 
+/* Center content with generous spacing */
 [data-hero-variant="minimal"] .main-slider__content,
 [data-hero-variant="minimal"] .page-header__inner {
   position: relative;
   z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
+/* Large, clean typography */
 [data-hero-variant="minimal"] .main-slider__title,
 [data-hero-variant="minimal"] .page-header__title {
-  font-size: var(--title-size);
-  font-weight: var(--title-weight);
-  letter-spacing: var(--title-spacing);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
   line-height: 1.4;
+  margin-bottom: 32px;
+  color: #333;
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.8);
 }
 
+/* Subtitle */
+[data-hero-variant="minimal"] .main-slider__text,
+[data-hero-variant="minimal"] .page-header__text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 48px;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Simple button */
 [data-hero-variant="minimal"] .thm-btn {
-  padding: 16px 40px;
-  border-radius: var(--radius-md);
+  padding: 16px 48px;
+  border-radius: 2px;
   font-weight: 400;
-  letter-spacing: 0.05em;
-  transition: all 0.5s ease;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 13px;
+  background: #d4af37;
+  color: white;
+  border: none;
+  transition: all 0.4s ease;
 }
 
 [data-hero-variant="minimal"] .thm-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.3);
+  background: #b8941e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
 }

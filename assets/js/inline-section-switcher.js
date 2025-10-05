@@ -29,9 +29,9 @@ class InlineSectionSwitcher {
     };
 
     this.variants = [
-      { id: 'minimal', name: 'بسيط' },
-      { id: 'modern', name: 'عصري' },
-      { id: 'luxury', name: 'فاخر' }
+      { id: 'minimal', name: 'بسيط', desc: 'تصميم نظيف وواسع' },
+      { id: 'modern', name: 'عصري', desc: 'جريء وديناميكي' },
+      { id: 'luxury', name: 'فاخر', desc: 'أنيق وفخم' }
     ];
 
     this.storageKey = 'thahabInlineSectionDesigns';
@@ -54,20 +54,16 @@ class InlineSectionSwitcher {
     localStorage.setItem(this.storageKey, JSON.stringify(this.designs));
   }
 
-  // Get unique ID for a section element
   getSectionId(element, selector) {
-    // Use selector + index if multiple exist
     const allElements = document.querySelectorAll(selector);
     const index = Array.from(allElements).indexOf(element);
     return `${selector.replace(/\./g, '')}-${index}`;
   }
 
-  // Get current variant for a section
   getCurrentVariant(sectionId, category) {
     if (this.designs[sectionId]) {
       return this.designs[sectionId];
     }
-    // Default variants per category
     const defaults = {
       header: 'minimal',
       hero: 'modern',
@@ -79,7 +75,6 @@ class InlineSectionSwitcher {
     return defaults[category] || 'modern';
   }
 
-  // Inject switcher into a section
   injectSwitchers() {
     let count = 0;
 
@@ -95,7 +90,9 @@ class InlineSectionSwitcher {
             <button class="inline-switcher__toggle"
                     data-tooltip="${config.name}"
                     aria-label="تغيير تصميم ${config.name}">
-              <i class="fas fa-palette"></i>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
             </button>
 
             <div class="inline-switcher__menu">
@@ -105,7 +102,10 @@ class InlineSectionSwitcher {
                 <button class="inline-switcher__option ${currentVariant === variant.id ? 'active' : ''}"
                         data-variant="${variant.id}">
                   <span class="inline-switcher__indicator inline-switcher__indicator--${variant.id}"></span>
-                  <span>${variant.name}</span>
+                  <span class="inline-switcher__option-text">
+                    <strong>${variant.name}</strong>
+                    <small>${variant.desc}</small>
+                  </span>
                 </button>
               `).join('')}
             </div>
@@ -122,26 +122,22 @@ class InlineSectionSwitcher {
   }
 
   bindEvents() {
-    // Toggle switcher menu
     document.querySelectorAll('.inline-switcher__toggle').forEach(toggle => {
       toggle.addEventListener('click', (e) => {
         e.stopPropagation();
         const switcher = toggle.closest('.inline-switcher');
         const wasActive = switcher.classList.contains('active');
 
-        // Close all other switchers
         document.querySelectorAll('.inline-switcher').forEach(s => {
           s.classList.remove('active');
         });
 
-        // Toggle current
         if (!wasActive) {
           switcher.classList.add('active');
         }
       });
     });
 
-    // Variant selection
     document.querySelectorAll('.inline-switcher__option').forEach(option => {
       option.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -150,27 +146,21 @@ class InlineSectionSwitcher {
         const category = switcher.dataset.category;
         const variant = option.dataset.variant;
 
-        // Update design
         this.designs[sectionId] = variant;
         this.saveDesigns();
 
-        // Update UI - mark option as active
         switcher.querySelectorAll('.inline-switcher__option').forEach(opt => {
           opt.classList.remove('active');
         });
         option.classList.add('active');
 
-        // Apply variant to section
         this.applyVariantToSection(switcher, variant, category);
-
-        // Close menu
         switcher.classList.remove('active');
 
         console.log(`✓ Changed ${sectionId} to ${variant}`);
       });
     });
 
-    // Close on outside click
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.inline-switcher')) {
         document.querySelectorAll('.inline-switcher').forEach(s => {
@@ -179,7 +169,6 @@ class InlineSectionSwitcher {
       }
     });
 
-    // Close on ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.querySelectorAll('.inline-switcher').forEach(s => {
@@ -202,23 +191,18 @@ class InlineSectionSwitcher {
     const section = switcher.closest('section, header, footer');
     if (!section) return;
 
-    // Remove all variant classes
     this.variants.forEach(v => {
       section.classList.remove(`variant-${v.id}`);
       section.removeAttribute(`data-variant-${v.id}`);
     });
 
-    // Add new variant class
     section.classList.add(`variant-${variant}`);
     section.setAttribute('data-variant', variant);
     section.setAttribute(`data-${category}-variant`, variant);
-
-    // Also update body attribute for global styles
     document.body.setAttribute(`data-${category}-variant`, variant);
   }
 }
 
-// Initialize on DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     new InlineSectionSwitcher();

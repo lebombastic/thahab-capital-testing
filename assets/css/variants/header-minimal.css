@@ -1,44 +1,132 @@
-/* HEADER - MINIMAL VARIANT */
+/* ============================================
+   HEADER - MINIMAL VARIANT
+   Clean, two-line, center-aligned with glass effect
+   ============================================ */
 
 [data-header-variant="minimal"] .main-header,
 [data-header-variant="minimal"].main-header {
-  --header-height: 90px;
-  --header-padding: var(--spacing-lg);
+  --header-height: 100px;
   --header-bg: rgba(255, 255, 255, 0.95);
-  --header-shadow: var(--shadow-sm);
-  --logo-scale: 0.95;
-  --nav-font-weight: 300;
-  --nav-letter-spacing: 0.05em;
+  --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 
   height: var(--header-height);
-  padding: 0 var(--header-padding);
   background: var(--header-bg);
   box-shadow: var(--header-shadow);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Two-line layout: Logo top, Menu bottom */
+[data-header-variant="minimal"] .main-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100px;
+  padding: 16px 20px;
+}
+
+/* Logo centered on top */
+[data-header-variant="minimal"] .main-menu__logo {
+  order: 1;
 }
 
 [data-header-variant="minimal"] .main-menu__logo img {
-  transform: scale(var(--logo-scale));
-  transition: transform 0.4s ease;
+  max-height: 45px;
+  width: auto;
+}
+
+/* Menu centered below */
+[data-header-variant="minimal"] .main-menu__list {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 [data-header-variant="minimal"] .main-menu__list > li > a {
-  font-weight: var(--nav-font-weight);
-  letter-spacing: var(--nav-letter-spacing);
-  padding: var(--spacing-md) var(--spacing-lg);
-  transition: color 0.3s ease;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-[data-header-variant="minimal"] .stricky-header {
-  background: var(--header-bg);
-  box-shadow: var(--shadow-md);
+/* Underline hover effect */
+[data-header-variant="minimal"] .main-menu__list > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  transition: width 0.3s ease;
 }
 
-[data-header-variant="minimal"] .mobile-nav__wrapper {
-  background: rgba(255, 255, 255, 0.98);
+[data-header-variant="minimal"] .main-menu__list > li > a:hover::after,
+[data-header-variant="minimal"] .main-menu__list > li.current > a::after {
+  width: 100%;
 }
 
-[data-header-variant="minimal"] .search-popup {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
+[data-header-variant="minimal"] .main-menu__list > li > a:hover,
+[data-header-variant="minimal"] .main-menu__list > li.current > a {
+  color: #d4af37;
+}
+
+/* Search icon */
+[data-header-variant="minimal"] .main-menu__search {
+  order: 3;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+[data-header-variant="minimal"] .main-menu__search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  transition: all 0.3s ease;
+}
+
+[data-header-variant="minimal"] .main-menu__search-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  transform: scale(1.1);
+}
+
+/* Sticky - collapses to single line */
+[data-header-variant="minimal"] .stricky-header.stricked-menu {
+  height: 70px;
+}
+
+[data-header-variant="minimal"] .stricky-header.stricked-menu .main-menu__wrapper {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  gap: 0;
+}
+
+[data-header-variant="minimal"] .stricky-header.stricked-menu .main-menu__logo img {
+  max-height: 40px;
+}
+
+@media (max-width: 991px) {
+  [data-header-variant="minimal"] .main-menu__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  [data-header-variant="minimal"] .main-menu__list {
+    display: none;
+  }
 }
