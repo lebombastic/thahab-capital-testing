@@ -1,6 +1,9 @@
-/* CONTENT SECTIONS - MODERN VARIANT */
+/* ============================================
+   CONTENT SECTIONS - MODERN VARIANT
+   Bold, Dynamic, Contemporary Design
+   ============================================ */
 
-/* Apply to sections with data-content-variant="modern" */
+/* Section-level styling */
 .about-one[data-content-variant="modern"],
 .about-three[data-content-variant="modern"],
 .counter-one[data-content-variant="modern"],
@@ -16,56 +19,78 @@
 .cta-one[data-content-variant="modern"],
 .cta-three[data-content-variant="modern"],
 .news-one[data-content-variant="modern"],
-.floor-plan[data-content-variant="modern"] {
-  --section-padding-y: 100px;
-  --card-padding: 36px;
-  --card-gap: 24px;
-  --card-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
-  --card-border: none;
-  --card-radius: 12px;
-  --card-hover-lift: -8px;
-
-  padding: var(--section-padding-y) 0;
+.floor-plan[data-content-variant="modern"],
+.cards-container[data-content-variant="modern"] {
+  /* Balanced spacing */
+  padding: 100px 0;
+  background: linear-gradient(135deg,
+    rgba(212, 175, 55, 0.06) 0%,
+    transparent 50%,
+    rgba(201, 162, 39, 0.08) 100%
+  );
 }
 
-/* Card styling within modern variant sections */
+/* Card elements - bold and vibrant */
 [data-content-variant="modern"] .apartment-one__single,
 [data-content-variant="modern"] .counter-one__single,
 [data-content-variant="modern"] .testimonial-one__single,
 [data-content-variant="modern"] .card {
-  box-shadow: var(--card-shadow);
-  border: var(--card-border);
-  border-radius: var(--card-radius);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(244, 228, 179, 0.05) 100%);
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(244, 228, 179, 0.06) 100%
+  );
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 20px rgba(212, 175, 55, 0.15),
+    0 0 0 1px rgba(212, 175, 55, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover effects - careful not to break grid layout */
+/* Snappy hover - instant feedback */
 [data-content-variant="modern"] .apartment-one__single:hover,
 [data-content-variant="modern"] .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(212, 175, 55, 0.25);
+  box-shadow:
+    0 16px 48px rgba(212, 175, 55, 0.25),
+    0 0 0 2px rgba(201, 162, 39, 0.2);
 }
 
+/* Typography - bold and impactful */
 [data-content-variant="modern"] .section-title__title {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+  background: linear-gradient(135deg,
+    #c9a227 0%,
+    #d4af37 50%,
+    #c9a227 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-[data-content-variant="modern"] .cta-one {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(201, 162, 39, 0.15) 100%);
+[data-content-variant="modern"] .apartment-one__title,
+[data-content-variant="modern"] .testimonial-one__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
+/* CTA sections - vibrant gradient */
+.cta-one[data-content-variant="modern"] {
+  background: linear-gradient(135deg,
+    rgba(212, 175, 55, 0.12) 0%,
+    rgba(201, 162, 39, 0.18) 100%
+  );
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .about-one[data-content-variant="modern"],
   .apartment-one[data-content-variant="modern"],
   .apartments-two-page[data-content-variant="modern"],
   .counter-one[data-content-variant="modern"] {
-    --section-padding-y: 60px;
+    padding: 60px 0;
   }
 }

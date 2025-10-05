@@ -1,49 +1,62 @@
-/* CONTENT SECTIONS - LUXURY VARIANT */
+/* ============================================
+   CONTENT SECTIONS - LUXURY VARIANT
+   Rich, Sophisticated, Opulent Design
+   ============================================ */
 
-[data-content-variant="luxury"] .about-one,
-[data-content-variant="luxury"] .about-three,
-[data-content-variant="luxury"] .counter-one,
-[data-content-variant="luxury"] .why-choose-one,
-[data-content-variant="luxury"] .brand-one,
-[data-content-variant="luxury"] .brand-two,
-[data-content-variant="luxury"] .apartment-one,
-[data-content-variant="luxury"] .apartments-two-page,
-[data-content-variant="luxury"] .apartment-details-one,
-[data-content-variant="luxury"] .apartment-details-two,
-[data-content-variant="luxury"] .testimonial-one,
-[data-content-variant="luxury"] .testimonial-two,
-[data-content-variant="luxury"] .cta-one,
-[data-content-variant="luxury"] .cta-three,
-[data-content-variant="luxury"] .news-one,
-[data-content-variant="luxury"] .floor-plan {
-  --section-padding-y: 160px;
-  --card-padding: 56px;
-  --card-gap: 40px;
-  --card-shadow: 0 8px 32px rgba(184, 148, 30, 0.2);
-  --card-border: 2px solid rgba(212, 175, 55, 0.25);
-  --card-radius: 16px;
-  --card-hover-lift: -16px;
-
-  padding: var(--section-padding-y) 0;
+/* Section-level styling with ornate background */
+.about-one[data-content-variant="luxury"],
+.about-three[data-content-variant="luxury"],
+.counter-one[data-content-variant="luxury"],
+.why-choose-one[data-content-variant="luxury"],
+.brand-one[data-content-variant="luxury"],
+.brand-two[data-content-variant="luxury"],
+.apartment-one[data-content-variant="luxury"],
+.apartments-two-page[data-content-variant="luxury"],
+.apartment-details-one[data-content-variant="luxury"],
+.apartment-details-two[data-content-variant="luxury"],
+.testimonial-one[data-content-variant="luxury"],
+.testimonial-two[data-content-variant="luxury"],
+.cta-one[data-content-variant="luxury"],
+.cta-three[data-content-variant="luxury"],
+.news-one[data-content-variant="luxury"],
+.floor-plan[data-content-variant="luxury"],
+.cards-container[data-content-variant="luxury"] {
+  /* Luxurious spacing */
+  padding: 160px 0;
   position: relative;
+  background: linear-gradient(180deg,
+    rgba(184, 148, 30, 0.03) 0%,
+    rgba(26, 26, 26, 0.02) 50%,
+    rgba(184, 148, 30, 0.03) 100%
+  );
 }
 
-[data-content-variant="luxury"] .about-one::before,
-[data-content-variant="luxury"] .apartment-one::before,
-[data-content-variant="luxury"] .testimonial-one::before {
+/* Ornate pattern overlay */
+.about-one[data-content-variant="luxury"]::before,
+.apartment-one[data-content-variant="luxury"]::before,
+.apartments-two-page[data-content-variant="luxury"]::before,
+.testimonial-one[data-content-variant="luxury"]::before,
+.cards-container[data-content-variant="luxury"]::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:
+  background-image:
     repeating-linear-gradient(
       45deg,
       transparent,
-      transparent 20px,
-      rgba(212, 175, 55, 0.02) 20px,
-      rgba(212, 175, 55, 0.02) 40px
+      transparent 30px,
+      rgba(212, 175, 55, 0.015) 30px,
+      rgba(212, 175, 55, 0.015) 60px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 30px,
+      rgba(212, 175, 55, 0.015) 30px,
+      rgba(212, 175, 55, 0.015) 60px
     );
   pointer-events: none;
   z-index: 0;
@@ -54,68 +67,101 @@
   z-index: 1;
 }
 
+/* Card elements - rich and ornate */
 [data-content-variant="luxury"] .apartment-one__single,
 [data-content-variant="luxury"] .counter-one__single,
 [data-content-variant="luxury"] .testimonial-one__single,
 [data-content-variant="luxury"] .card {
-  padding: var(--card-padding);
-  gap: var(--card-gap);
-  box-shadow: var(--card-shadow);
-  border: var(--card-border);
-  border-radius: var(--card-radius);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 228, 179, 0.1) 100%);
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(244, 228, 179, 0.08) 100%
+  );
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgba(184, 148, 30, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   position: relative;
   overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-[data-content-variant="luxury"] .apartment-one__single::before,
-[data-content-variant="luxury"] .card::before {
+/* Radial glow effect on hover */
+[data-content-variant="luxury"] .apartment-one__single::after,
+[data-content-variant="luxury"] .card::after {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle,
+    rgba(212, 175, 55, 0.15) 0%,
+    transparent 60%
+  );
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
 }
 
-[data-content-variant="luxury"] .apartment-one__single:hover::before,
-[data-content-variant="luxury"] .card:hover::before {
+[data-content-variant="luxury"] .apartment-one__single:hover::after,
+[data-content-variant="luxury"] .card:hover::after {
   opacity: 1;
 }
 
+/* Dramatic hover lift */
 [data-content-variant="luxury"] .apartment-one__single:hover,
 [data-content-variant="luxury"] .card:hover {
-  transform: translateY(var(--card-hover-lift));
-  box-shadow: 0 20px 60px rgba(184, 148, 30, 0.35);
-  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-12px);
+  box-shadow:
+    0 24px 64px rgba(184, 148, 30, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(212, 175, 55, 0.55);
 }
 
+/* Typography - bold and elegant */
 [data-content-variant="luxury"] .section-title__title {
   font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #b8941e 0%, #d4af37 50%, #f4e4b3 100%);
+  background: linear-gradient(135deg,
+    #8b6f14 0%,
+    #b8941e 30%,
+    #d4af37 50%,
+    #f4e4b3 80%,
+    #d4af37 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.25));
 }
 
-[data-content-variant="luxury"] .cta-one {
-  background: linear-gradient(135deg, rgba(184, 148, 30, 0.1) 0%, rgba(26, 26, 26, 0.05) 100%);
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+[data-content-variant="luxury"] .apartment-one__title,
+[data-content-variant="luxury"] .testimonial-one__title {
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
+/* CTA sections - rich border treatment */
+.cta-one[data-content-variant="luxury"] {
+  background: linear-gradient(135deg,
+    rgba(184, 148, 30, 0.08) 0%,
+    rgba(26, 26, 26, 0.03) 100%
+  );
+  border-top: 2px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.25);
+  box-shadow: inset 0 1px 0 rgba(212, 175, 55, 0.1);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  [data-content-variant="luxury"] .about-one,
-  [data-content-variant="luxury"] .apartment-one,
-  [data-content-variant="luxury"] .counter-one {
-    --section-padding-y: 100px;
-    --card-padding: 40px;
+  .about-one[data-content-variant="luxury"],
+  .apartment-one[data-content-variant="luxury"],
+  .apartments-two-page[data-content-variant="luxury"],
+  .counter-one[data-content-variant="luxury"] {
+    padding: 100px 0;
   }
 }

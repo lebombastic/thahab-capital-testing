@@ -1,64 +1,77 @@
-/* CONTENT SECTIONS - MINIMAL VARIANT */
+/* ============================================
+   CONTENT SECTIONS - MINIMAL VARIANT
+   Clean, Spacious, Refined Design
+   ============================================ */
 
-[data-content-variant="minimal"] .about-one,
-[data-content-variant="minimal"] .about-three,
-[data-content-variant="minimal"] .counter-one,
-[data-content-variant="minimal"] .why-choose-one,
-[data-content-variant="minimal"] .brand-one,
-[data-content-variant="minimal"] .brand-two,
-[data-content-variant="minimal"] .apartment-one,
-[data-content-variant="minimal"] .apartments-two-page,
-[data-content-variant="minimal"] .apartment-details-one,
-[data-content-variant="minimal"] .apartment-details-two,
-[data-content-variant="minimal"] .testimonial-one,
-[data-content-variant="minimal"] .testimonial-two,
-[data-content-variant="minimal"] .cta-one,
-[data-content-variant="minimal"] .cta-three,
-[data-content-variant="minimal"] .news-one,
-[data-content-variant="minimal"] .floor-plan {
-  --section-padding-y: 140px;
-  --card-padding: 48px;
-  --card-gap: 32px;
-  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  --card-border: 1px solid rgba(212, 175, 55, 0.15);
-  --card-radius: 8px;
-  --card-hover-lift: -12px;
-
-  padding: var(--section-padding-y) 0;
+/* Section-level styling */
+.about-one[data-content-variant="minimal"],
+.about-three[data-content-variant="minimal"],
+.counter-one[data-content-variant="minimal"],
+.why-choose-one[data-content-variant="minimal"],
+.brand-one[data-content-variant="minimal"],
+.brand-two[data-content-variant="minimal"],
+.apartment-one[data-content-variant="minimal"],
+.apartments-two-page[data-content-variant="minimal"],
+.apartment-details-one[data-content-variant="minimal"],
+.apartment-details-two[data-content-variant="minimal"],
+.testimonial-one[data-content-variant="minimal"],
+.testimonial-two[data-content-variant="minimal"],
+.cta-one[data-content-variant="minimal"],
+.cta-three[data-content-variant="minimal"],
+.news-one[data-content-variant="minimal"],
+.floor-plan[data-content-variant="minimal"],
+.cards-container[data-content-variant="minimal"] {
+  /* Generous spacing for breathing room */
+  padding: 140px 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(244, 228, 179, 0.03) 100%);
 }
 
+/* Card elements - clean and simple */
 [data-content-variant="minimal"] .apartment-one__single,
 [data-content-variant="minimal"] .counter-one__single,
 [data-content-variant="minimal"] .testimonial-one__single,
 [data-content-variant="minimal"] .card {
-  padding: var(--card-padding);
-  gap: var(--card-gap);
-  box-shadow: var(--card-shadow);
-  border: var(--card-border);
-  border-radius: var(--card-radius);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Subtle hover - minimal movement */
 [data-content-variant="minimal"] .apartment-one__single:hover,
 [data-content-variant="minimal"] .card:hover {
-  transform: translateY(var(--card-hover-lift));
-  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.35);
 }
 
+/* Typography - light and airy */
 [data-content-variant="minimal"] .section-title__title {
   font-weight: 300;
-  letter-spacing: 0.05em;
-  line-height: 1.6;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  color: rgba(26, 26, 26, 0.85);
+  text-transform: none;
 }
 
-[data-content-variant="minimal"] .cta-one {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%);
+[data-content-variant="minimal"] .apartment-one__title,
+[data-content-variant="minimal"] .testimonial-one__title {
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
+/* CTA sections - soft gradient */
+.cta-one[data-content-variant="minimal"] {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(244, 228, 179, 0.12) 100%);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  [data-content-variant="minimal"] .about-one,
-  [data-content-variant="minimal"] .apartment-one,
-  [data-content-variant="minimal"] .counter-one {
-    --section-padding-y: 80px;
-    --card-padding: 32px;
+  .about-one[data-content-variant="minimal"],
+  .apartment-one[data-content-variant="minimal"],
+  .apartments-two-page[data-content-variant="minimal"],
+  .counter-one[data-content-variant="minimal"] {
+    padding: 80px 0;
   }
 }
