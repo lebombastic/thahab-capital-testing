@@ -1,0 +1,64 @@
+/* CONTENT SECTIONS - MINIMAL VARIANT */
+
+[data-content-variant="minimal"] .about-one,
+[data-content-variant="minimal"] .about-three,
+[data-content-variant="minimal"] .counter-one,
+[data-content-variant="minimal"] .why-choose-one,
+[data-content-variant="minimal"] .brand-one,
+[data-content-variant="minimal"] .brand-two,
+[data-content-variant="minimal"] .apartment-one,
+[data-content-variant="minimal"] .apartments-two-page,
+[data-content-variant="minimal"] .apartment-details-one,
+[data-content-variant="minimal"] .apartment-details-two,
+[data-content-variant="minimal"] .testimonial-one,
+[data-content-variant="minimal"] .testimonial-two,
+[data-content-variant="minimal"] .cta-one,
+[data-content-variant="minimal"] .cta-three,
+[data-content-variant="minimal"] .news-one,
+[data-content-variant="minimal"] .floor-plan {
+  --section-padding-y: 140px;
+  --card-padding: 48px;
+  --card-gap: 32px;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --card-border: 1px solid rgba(212, 175, 55, 0.15);
+  --card-radius: 8px;
+  --card-hover-lift: -12px;
+
+  padding: var(--section-padding-y) 0;
+}
+
+[data-content-variant="minimal"] .apartment-one__single,
+[data-content-variant="minimal"] .counter-one__single,
+[data-content-variant="minimal"] .testimonial-one__single,
+[data-content-variant="minimal"] .card {
+  padding: var(--card-padding);
+  gap: var(--card-gap);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+}
+
+[data-content-variant="minimal"] .apartment-one__single:hover,
+[data-content-variant="minimal"] .card:hover {
+  transform: translateY(var(--card-hover-lift));
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+}
+
+[data-content-variant="minimal"] .section-title__title {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+[data-content-variant="minimal"] .cta-one {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%);
+}
+
+@media (max-width: 768px) {
+  [data-content-variant="minimal"] .about-one,
+  [data-content-variant="minimal"] .apartment-one,
+  [data-content-variant="minimal"] .counter-one {
+    --section-padding-y: 80px;
+    --card-padding: 32px;
+  }
+}

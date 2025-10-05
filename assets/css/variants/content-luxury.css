@@ -1,0 +1,121 @@
+/* CONTENT SECTIONS - LUXURY VARIANT */
+
+[data-content-variant="luxury"] .about-one,
+[data-content-variant="luxury"] .about-three,
+[data-content-variant="luxury"] .counter-one,
+[data-content-variant="luxury"] .why-choose-one,
+[data-content-variant="luxury"] .brand-one,
+[data-content-variant="luxury"] .brand-two,
+[data-content-variant="luxury"] .apartment-one,
+[data-content-variant="luxury"] .apartments-two-page,
+[data-content-variant="luxury"] .apartment-details-one,
+[data-content-variant="luxury"] .apartment-details-two,
+[data-content-variant="luxury"] .testimonial-one,
+[data-content-variant="luxury"] .testimonial-two,
+[data-content-variant="luxury"] .cta-one,
+[data-content-variant="luxury"] .cta-three,
+[data-content-variant="luxury"] .news-one,
+[data-content-variant="luxury"] .floor-plan {
+  --section-padding-y: 160px;
+  --card-padding: 56px;
+  --card-gap: 40px;
+  --card-shadow: 0 8px 32px rgba(184, 148, 30, 0.2);
+  --card-border: 2px solid rgba(212, 175, 55, 0.25);
+  --card-radius: 16px;
+  --card-hover-lift: -16px;
+
+  padding: var(--section-padding-y) 0;
+  position: relative;
+}
+
+[data-content-variant="luxury"] .about-one::before,
+[data-content-variant="luxury"] .apartment-one::before,
+[data-content-variant="luxury"] .testimonial-one::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(212, 175, 55, 0.02) 20px,
+      rgba(212, 175, 55, 0.02) 40px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-content-variant="luxury"] .container {
+  position: relative;
+  z-index: 1;
+}
+
+[data-content-variant="luxury"] .apartment-one__single,
+[data-content-variant="luxury"] .counter-one__single,
+[data-content-variant="luxury"] .testimonial-one__single,
+[data-content-variant="luxury"] .card {
+  padding: var(--card-padding);
+  gap: var(--card-gap);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 228, 179, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-content-variant="luxury"] .apartment-one__single::before,
+[data-content-variant="luxury"] .card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+[data-content-variant="luxury"] .apartment-one__single:hover::before,
+[data-content-variant="luxury"] .card:hover::before {
+  opacity: 1;
+}
+
+[data-content-variant="luxury"] .apartment-one__single:hover,
+[data-content-variant="luxury"] .card:hover {
+  transform: translateY(var(--card-hover-lift));
+  box-shadow: 0 20px 60px rgba(184, 148, 30, 0.35);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+[data-content-variant="luxury"] .section-title__title {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #b8941e 0%, #d4af37 50%, #f4e4b3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);
+}
+
+[data-content-variant="luxury"] .cta-one {
+  background: linear-gradient(135deg, rgba(184, 148, 30, 0.1) 0%, rgba(26, 26, 26, 0.05) 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+@media (max-width: 768px) {
+  [data-content-variant="luxury"] .about-one,
+  [data-content-variant="luxury"] .apartment-one,
+  [data-content-variant="luxury"] .counter-one {
+    --section-padding-y: 100px;
+    --card-padding: 40px;
+  }
+}
