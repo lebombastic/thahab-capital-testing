@@ -210,3 +210,425 @@ section {
 .apartment-one__single {
   margin-bottom: var(--spacing-lg);
 }
+
+/* ============================================
+   HOMEPAGE HERO & HEADER CUSTOMIZATIONS
+   ============================================ */
+
+/* Remove header bottom border */
+.main-header:before {
+  display: none !important;
+}
+
+/* Make hero section 100vh height */
+.main-slider .swiper-slide {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.main-slider .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Change hero text animation from sliding to fade-in only */
+.main-slider__title {
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+.main-slider__sub-title {
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+/* Header Contact Info Styling */
+.main-menu__contact-info {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Separator line between search/cart and contact info */
+.main-menu__contact-info:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.main-menu__contact-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.main-menu__contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(201, 162, 39, 0.1);
+  color: var(--alipes-base, #c9a227);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.main-menu__contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.main-menu__contact-text a {
+  font-size: 14px;
+  color: var(--alipes-white, #ffffff);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.main-menu__phone {
+  font-weight: 600;
+}
+
+.main-menu__email {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.main-menu__contact-text a:hover {
+  color: var(--alipes-base, #c9a227);
+}
+
+.main-menu__cart-box {
+  display: none;
+}
+
+.main-menu__search-cart-box {
+  flex-direction: row-reverse !important;
+}
+
+.main-menu__search-cart-box::before {
+  display: none;
+}
+
+
+/* Responsive adjustments for contact info */
+@media (max-width: 1199px) {
+  .main-menu__contact-info {
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+
+  .main-menu__contact-text a {
+    font-size: 13px;
+  }
+
+  .main-menu__email {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-menu__contact-info {
+    display: none;
+  }
+}
+
+/* ============================================
+   BUTTON STYLING
+   ============================================ */
+
+/* Apply border-radius to all theme buttons */
+.thm-btn {
+  border-radius: 10px !important;
+}
+
+/* ============================================
+   ABOUT SECTION CUSTOMIZATIONS
+   ============================================ */
+
+/* Remove animations from about image box */
+.about-one__img-box {
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* Remove pseudo-elements from about image box (border and background) */
+.about-one__img-box::before,
+.about-one__img-box::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove animated dots shape */
+.about-one__shape-1 {
+  display: none !important;
+}
+
+/* Remove "THAHAB" big text overlay */
+.about-one__big-text {
+  display: none !important;
+}
+
+/* Add border-radius to about image */
+.about-one__img img {
+  border-radius: 10px !important;
+}
+
+/* Remove pseudo-elements from about image */
+.about-one__img::before,
+.about-one__img::after {
+  display: none !important;
+}
+
+.about-one__left {
+  margin-top: 0;
+  margin-left: 80px;
+}
+
+/* Service cards styling - make clickable with borders */
+.about-one__service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid var(--alipes-black, #1a1613);
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.about-one__service-card:hover {
+  background-color: rgba(201, 162, 39, 0.05);
+  border-color: var(--alipes-base, #c9a227);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-one__service-card .about-one__points-text {
+  margin-bottom: 0;
+  color: inherit;
+}
+
+/* Adjust list item spacing for bordered cards */
+/* .about-one__points-list li {
+  margin-bottom: 16px;
+} */
+
+.about-one__points-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   COUNTER SECTION CUSTOMIZATIONS
+   ============================================ */
+
+/* Make counter boxes clickable */
+.counter-one__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Reduce padding to make boxes more square */
+/* .counter-one__single {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+} */
+
+/* Hover effects */
+.counter-one__link:hover .counter-one__single {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.counter-one__link:hover .counter-one__shape {
+  background-color: var(--alipes-base, #c9a227);
+}
+
+.counter-one__link:hover .counter-one__icon img {
+  transform: scale(1.1);
+}
+
+.counter-one__icon img {
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   WHY CHOOSE SECTION REDESIGN
+   ============================================ */
+
+/* YouTube Video Background */
+.why-choose-one {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.why-choose-one__video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.why-choose-one__video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 aspect ratio */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16:9 */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.why-choose-one__video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Hide old background and decorations */
+.why-choose-one__bg,
+.why-choose-one__shape-1,
+.why-choose-one__shape-2 {
+  display: none !important;
+}
+
+/* Content positioning */
+.why-choose-one .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title styling */
+.why-choose-one__title {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: right;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards container - 2 columns grid */
+.why-choose-one__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Individual card styling */
+.why-choose-one__card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-one__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Card icon */
+.why-choose-one__card-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: linear-gradient(135deg, #c9a227 0%, #d4af37 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.why-choose-one__card:hover .why-choose-one__card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card content */
+.why-choose-one__card-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--alipes-black, #1a1613);
+  line-height: 1.4;
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .why-choose-one {
+    padding: 80px 0;
+  }
+
+  .why-choose-one__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .why-choose-one__cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-choose-one {
+    padding: 60px 0;
+  }
+
+  .why-choose-one__title {
+    font-size: 28px;
+  }
+
+  .why-choose-one__card {
+    padding: 16px;
+  }
+
+  .why-choose-one__card-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 20px;
+  }
+
+  .why-choose-one__card-content h4 {
+    font-size: 14px;
+  }
+}
