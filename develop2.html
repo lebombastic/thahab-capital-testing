@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="en" >
+<html dir="rtl" lang="ar" >
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>thahb </title>
 	<!-- favicons Icons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/resources/icon gold.svg" />
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/resources/icon gold.svg" />
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/resources/icon gold.svg" />
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/resources/icon%20gold.svg" />
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/resources/icon%20gold.svg" />
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/resources/icon%20gold.svg" />
 	<link rel="manifest" href="assets/images/favicons/site.webmanifest" />
 	<meta name="description" content="alipes HTML 5 Template " />
 
@@ -48,30 +48,6 @@
 	<link rel="stylesheet" href="assets/css/alipes-rtl.css" />
 	<link rel="stylesheet" href="assets/css/alipes-responsive-rtl.css" />
 	<link rel="stylesheet" href="assets/css/alipes-custom-rtl.css" />
-	<!-- Section-Based Design Switcher Styles -->
-	<link rel="stylesheet" href="assets/css/section-switcher-base.css" />
-	<link rel="stylesheet" href="assets/css/section-switcher-spacing.css" />
-	<link rel="stylesheet" href="assets/css/inline-section-switcher.css" />
-
-	<!-- Variant Styles -->
-	<link rel="stylesheet" href="assets/css/variants/header-minimal.css" />
-	<link rel="stylesheet" href="assets/css/variants/header-modern.css" />
-	<link rel="stylesheet" href="assets/css/variants/header-luxury.css" />
-	<link rel="stylesheet" href="assets/css/variants/hero-minimal.css" />
-	<link rel="stylesheet" href="assets/css/variants/hero-modern.css" />
-	<link rel="stylesheet" href="assets/css/variants/hero-luxury.css" />
-	<link rel="stylesheet" href="assets/css/variants/content-minimal.css" />
-	<link rel="stylesheet" href="assets/css/variants/content-modern.css" />
-	<link rel="stylesheet" href="assets/css/variants/content-luxury.css" />
-	<link rel="stylesheet" href="assets/css/variants/gallery-minimal.css" />
-	<link rel="stylesheet" href="assets/css/variants/gallery-modern.css" />
-	<link rel="stylesheet" href="assets/css/variants/gallery-luxury.css" />
-	<link rel="stylesheet" href="assets/css/variants/forms-minimal.css" />
-	<link rel="stylesheet" href="assets/css/variants/forms-modern.css" />
-	<link rel="stylesheet" href="assets/css/variants/forms-luxury.css" />
-	<link rel="stylesheet" href="assets/css/variants/footer-minimal.css" />
-	<link rel="stylesheet" href="assets/css/variants/footer-modern.css" />
-	<link rel="stylesheet" href="assets/css/variants/footer-luxury.css" />
 
 	<link rel="stylesheet" href="assets/vendors/layerdrops-toolbar/css/layerdrops-toolbar.css">
 <!-- Noto Sans Arabic CDN -->
@@ -79,234 +55,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    
-    body {
-      background:var(--alipes-black);
-      /* color: white;
-      min-height: 100vh;
-      padding: 40px 20px;
-      position: relative;
-      overflow-x: hidden; */
-    }
-/*     
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://source.unsplash.com/random/1920x1080/?building');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-      z-index: -1;
-    } */
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    .cards-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    
-    @media (min-width: 768px) {
-      .cards-container {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    
-    .card {
-		background-color: rgb(153 166 188 / 80%);
-		backdrop-filter: blur(8px);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-    
-    .card-content {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
-    }
-    
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-    }
-    
-    .card-header .stat-number {
-      font-size: 24px;
-      font-weight: bold;
-	  color: #000 !important;
-    }
-    
-    .icon-box {
-      background-color: #1D3C6E;
-      padding: 12px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-    }
-    
-    .subtitle {
-      color: #000;
-      font-size: 14px;
-      margin-bottom: 16px;
-      text-align: right;
-    }
-    
-    .title {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 16px;
-      text-align: right;
-	  color: #000 !important;
-    }
-    
-    .description {
-      color: #000;
-      font-size: 14px;
-      line-height: 1.6;
-      text-align: right;
-      margin-bottom: 40px;
-    }
-    
-    .stats-footer {
-      margin-top: auto;
-      margin-bottom: 24px;
-    }
-    
-    .stats-footer .stat-number {
-      font-size: 24px;
-      font-weight: bold;
-	  color: #000 !important;
-    }
-    
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-    
-    .circle-button {
-      background-color: #1D3C6E;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-    
-    .service-button {
-      background: transparent;
-      color: white;
-      border: 1px solid white;
-      padding: 8px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-    
-    .service-button:hover {
-      background-color: white;
-      color: #1D3C6E;
-    }
-    
-    /* Icons */
-    .icon {
-      width: 24px;
-      height: 24px;
-      stroke: white;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-    
-    .arrow-icon {
-      transform: rotate(-45deg);
-    }
-    
-    /* Button wrapper and styling */
-    .request-service-wrapper {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    
-    .request-service-wrapper:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-    
-    .request-service-text {
-      font-size: 14px;
-	  color: white;
-    }
-  * {
-    font-family: 'Tajawal', sans-serif;
-  }
-/* استهدف العنصر الخارجي للقائمة */
-.nice-select {
-  direction: rtl !important;
-  text-align: right !important;
-}
-
-/* العنصر اللي بيعرض الخيار الحالي */
-.nice-select .current {
-  text-align: right !important;
-  display: block;
-}
-
-/* القائمة المنسدلة نفسها */
-.nice-select .list {
-  direction: rtl !important;
-  text-align: right !important;
-}
-
-/* كل خيار داخل القائمة */
-.nice-select .option {
-  direction: rtl !important;
-  text-align: right !important;
-}
-.nice-select::after {
-  right: auto !important;
-  left: 10px !important; /* ضع السهم يسار العنصر */
-  transform: rotate(-45deg) !important; /* يعكس اتجاه السهم */
-  border-color: #555 transparent transparent #555 !important; /* شكل السهم */
-}
-
-</style>
 
 </head>
 
@@ -371,11 +119,11 @@
 						<div class="main-menu__left">
 							<div class="main-menu__logo">
 								<!-- <a href="#"><img src="assets/images/resources/vertical-white.svg"  alt=""></a> -->
-								<a href="#"><img src="assets/images/resources/vertical white(1) 1.png"  width="200" alt=""></a>
+								<a href="develop2.html#"><img src="assets/images/resources/vertical%20white(1)%201.png"  width="200" alt=""></a>
 							</div>
 						</div>
 						<div class="main-menu__main-menu-box">
-							<a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+							<a href="develop2.html#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
 							<ul class="main-menu__list">
 								<li class="dropdown current megamenu">
  
@@ -383,7 +131,7 @@
 									 
 								</li>
 								<li>
-									<a style="font-family: 'Tajawal', sans-serif;" href="./projects.html">مشاريعنا</a>
+									<a style="font-family: 'Tajawal', sans-serif;" href="projects.html">مشاريعنا</a>
 								</li>
 								<!-- <li class="dropdown">
 									<a href="#">مجتمعاتنا</a>
@@ -401,7 +149,7 @@
 									</ul>
 								</li> -->
 								<li class="dropdown">
-									<a style="font-family: 'Tajawal', sans-serif;"href="./develop2.html">التطوير العقاري</a>
+									<a style="font-family: 'Tajawal', sans-serif;"href="develop2.html">التطوير العقاري</a>
 									<!-- <ul class="shadow-box">
 										<li><a href="apartments.html">Appartments One</a></li>
 										<li><a href="apartments-2.html">Appartments Two</a></li>
@@ -411,7 +159,7 @@
 									</ul> -->
 								</li>
 								<li class="dropdown">
-									<a style="font-family: 'Tajawal', sans-serif;" href="./about-us.html">من نحن </a>
+									<a style="font-family: 'Tajawal', sans-serif;" href="about-us.html">من نحن </a>
 									<!-- <ul class="shadow-box">
 										<li><a href="news.html">News</a></li>
 										<li><a href="news-carousel.html">News Carousel</a></li>
@@ -420,7 +168,7 @@
 									</ul> -->
 								</li>
 								<li class="dropdown">
-									<a style="font-family: 'Tajawal', sans-serif;" href="./contactus.html">تواصل معنا</a>
+									<a style="font-family: 'Tajawal', sans-serif;" href="contactus.html">تواصل معنا</a>
 									<!-- <ul class="shadow-box">
 										<li><a href="news.html">News</a></li>
 										<li><a href="news-carousel.html">News Carousel</a></li>
@@ -446,7 +194,7 @@
 							<div class="main-menu__search-cart-btn">
 								<div class="main-menu__search-cart-box">
 									<div class="main-menu__search-box">
-										<a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
+										<a href="develop2.html#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
 									</div>
 									<div class="main-menu__cart-box">
 										<!-- <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a> -->
@@ -487,42 +235,42 @@
         <!--Contact Page Start-->
         <section class="" style="margin-top: 100px; background-image: url(assets/images/resources/1221.jpg);" >
        <div class="container">
-    <div class="cards-container">
+    <div class="dev-cards-container">
       <!-- First Card -->
-      <div class="card">
-        <div class="card-content">
-          <div class="card-header">
+      <div class="dev-card">
+        <div class="dev-card-content">
+          <div class="dev-card-header">
             <div class="stat-number">+12</div>
-            <div class="icon-box">
-              <svg class="icon" viewBox="0 0 24 24">
+            <div class="dev-icon-box">
+              <svg class="dev-icon" viewBox="0 0 24 24">
                 <path d="M12 20h9"></path>
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
               </svg>
             </div>
           </div>
-          
-          <div class="subtitle">مشاريع عقارية قيد التنفيذ</div>
-          <h2 class="title">ادارة التطوير الشامل</h2>
-          <div class="description">
+
+          <div class="dev-subtitle">مشاريع عقارية قيد التنفيذ</div>
+          <h2 class="dev-title">ادارة التطوير الشامل</h2>
+          <div class="dev-description">
             تقدم ذهب كابيتال العقارية خدمة إدارة التطوير الشامل للمشاريع العقارية من الدراسات والتصاميم إلى تنفيذ المشاريع لتحقيق مستهدفات العملاء.
           </div>
-          
-          <div class="stats-footer">
+
+          <div class="dev-stats-footer">
             <div class="stat-number">+25</div>
-            <div class="subtitle">حلول تطوير شاملة</div>
+            <div class="dev-subtitle">حلول تطوير شاملة</div>
           </div>
-          
-          <div class="card-footer">
-            <div class="circle-button">
-              <svg class="icon arrow-icon" viewBox="0 0 24 24">
+
+          <div class="dev-card-footer">
+            <div class="dev-circle-button">
+              <svg class="dev-icon dev-arrow-icon" viewBox="0 0 24 24">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </div>
-            <div class="request-service-wrapper">
-				<a href="./management.html">
-					<span class="request-service-text">اطلب الخدمة</span>
-					<svg class="icon" viewBox="0 0 24 24">
+            <div class="dev-request-service-wrapper">
+				<a href="management.html">
+					<span class="dev-request-service-text">اطلب الخدمة</span>
+					<svg class="dev-icon" viewBox="0 0 24 24">
 						<line x1="5" y1="12" x2="19" y2="12"></line>
 						<polyline points="12 5 19 12 12 19"></polyline>
 					</svg>
@@ -532,43 +280,43 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Second Card -->
-      <div class="card">
-        <div class="card-content">
-          <div class="card-header">
+      <div class="dev-card">
+        <div class="dev-card-content">
+          <div class="dev-card-header">
             <div class="stat-number">+12</div>
-            <div class="icon-box">
-              <svg class="icon" viewBox="0 0 24 24">
+            <div class="dev-icon-box">
+              <svg class="dev-icon" viewBox="0 0 24 24">
                 <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                 <polyline points="17 6 23 6 23 12"></polyline>
               </svg>
             </div>
           </div>
-          
-          <div class="subtitle">مشاريع عقارية قيد التنفيذ</div>
-          <h2 class="title">التطوير والتنفيذ</h2>
-          <div class="description">
+
+          <div class="dev-subtitle">مشاريع عقارية قيد التنفيذ</div>
+          <h2 class="dev-title">التطوير والتنفيذ</h2>
+          <div class="dev-description">
             تقدم ذهب كابيتال كابيتال العقارية خبرات متعددة لتطوير وتنفيذ المشاريع العقارية مع توفير الحلول التمويلية والتصميم والتنفيذ والتسويق لضمان الجودة والمخرجات
           </div>
-          
-          <div class="stats-footer">
+
+          <div class="dev-stats-footer">
             <div class="stat-number">+35</div>
-            <div class="subtitle">مشروع</div>
+            <div class="dev-subtitle">مشروع</div>
           </div>
-          
-          <div class="card-footer">
-            <div class="circle-button">
-              <svg class="icon arrow-icon" viewBox="0 0 24 24">
+
+          <div class="dev-card-footer">
+            <div class="dev-circle-button">
+              <svg class="dev-icon dev-arrow-icon" viewBox="0 0 24 24">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </div>
-            <div class="request-service-wrapper">
-				<a href="./develop.html">
+            <div class="dev-request-service-wrapper">
+				<a href="develop.html">
 
-					<span class="request-service-text" >اطلب الخدمة</span>
-					<svg class="icon" viewBox="0 0 24 24">
+					<span class="dev-request-service-text" >اطلب الخدمة</span>
+					<svg class="dev-icon" viewBox="0 0 24 24">
 						<line x1="5" y1="12" x2="19" y2="12"></line>
 						<polyline points="12 5 19 12 12 19"></polyline>
 					</svg>
@@ -594,7 +342,7 @@
 							<div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="100ms">
 								<div class="footer-widget__column footer-widget__about">
 									<div class="footer-widget__logo">
-										<a href="#"><img src="assets/images/resources/vertical white(1) 1.png"  class="mx-5" width="200"
+										<a href="develop2.html#"><img src="assets/images/resources/vertical%20white(1)%201.png"  class="mx-5" width="200"
 												alt=""></a>
 									</div>
 								</div>
@@ -677,7 +425,7 @@ info@thahab.sa</a></p>
 					<div class="site-footer__bottom">
 						<div class="site-footer__bottom-inner">
 							<div class="site-footer__bottom-left">
-								<p style="  color: #ffff;" class="site-footer__bottom-text">جميع الحقوق محفوظة لشركة ذهب كابيتال العقارية 2025 <a href="#">  </a>
+								<p style="  color: #ffff;" class="site-footer__bottom-text">جميع الحقوق محفوظة لشركة ذهب كابيتال العقارية 2025 <a href="develop2.html#">  </a>
 								</p>
 							</div>
 							<div class="site-footer__bottom-right">
@@ -706,7 +454,7 @@ info@thahab.sa</a></p>
 			<span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
 			<div class="logo-box">
-				<a href="#" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="40"
+				<a href="develop2.html#" aria-label="logo image"><img src="https://thahab.sa/assets/images/resources/logo-1.png" width="40"
 						alt="" /></a>
 			</div>
 			<!-- /.logo-box -->
@@ -744,7 +492,7 @@ info@thahab.sa</a></p>
 		<div class="search-popup__overlay search-toggler"></div>
 		<!-- /.search-popup__overlay -->
 		<div class="search-popup__content">
-			<form action="#">
+			<form action="develop2.html#">
 				<label for="search" class="sr-only">search here</label><!-- /.sr-only -->
 				<input type="text" id="search" placeholder="   ابحث هنا ..." />
 				<button type="submit" aria-label="search submit" class="thm-btn">
@@ -791,8 +539,6 @@ info@thahab.sa</a></p>
 
     <!-- template js -->
     <script src="assets/js/alipes.js"></script>
-	<!-- Design Switcher JS -->
-	<script src="assets/js/inline-section-switcher.js"></script>
 </body>
 
 </html>

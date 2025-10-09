@@ -1032,4 +1032,53 @@
 
   $('select:not(.ignore)').niceSelect();
 
+  // Enhanced Theme Switcher
+  // Note: HTML uses class "theme-select"; support both to be safe.
+  $(document).on('change', '.section-theme-select, .theme-select', function () {
+    var theme = $(this).val();
+    // Find the nearest section-like container to scope the theme
+    var section = $(this).closest('section, header, footer, .counter-one, .gallery-one, .testimonial-one, .contact-one, .google-map');
+    
+    if (section && section.length) {
+      // Add a transition class before changing theme
+      section.addClass('theme-transitioning');
+      
+      // Remove previous theme classes and add new one
+      section.removeClass('theme-1 theme-2 theme-3 theme-4').addClass(theme);
+      
+      // Update the switcher icon and visual indication
+      var themeIcon = '';
+      if (theme === 'theme-1') themeIcon = '🏠';
+      if (theme === 'theme-2') themeIcon = '✨';
+      if (theme === 'theme-3') themeIcon = '🔲';
+      if (theme === 'theme-4') themeIcon = '✨';
+      
+      // Notify user of theme change
+      var sectionName = $(this).data('section') || 'Global';
+      sectionName = sectionName.charAt(0).toUpperCase() + sectionName.slice(1);
+      sectionName = sectionName.replace(/-/g, ' ');
+      
+      // Show brief animation of theme change
+      var notification = $('<div class="theme-change-notification">' + themeIcon + ' ' + 
+                          theme.replace('theme-', 'Theme ') + ' applied to ' + sectionName + '</div>');
+      $('body').append(notification);
+      
+      setTimeout(function() {
+        notification.addClass('show');
+      }, 100);
+      
+      setTimeout(function() {
+        notification.removeClass('show');
+        setTimeout(function() {
+          notification.remove();
+        }, 500);
+      }, 2000);
+      
+      // Remove transition class after change is complete
+      setTimeout(function() {
+        section.removeClass('theme-transitioning');
+      }, 500);
+    }
+  });
+
 })(jQuery);
