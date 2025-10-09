@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar" >
+<html dir="rtl" lang="en" >
 
 <head>
 	<meta charset="UTF-8" />
@@ -48,6 +48,7 @@
 	<link rel="stylesheet" href="assets/css/alipes-rtl.css" />
 	<link rel="stylesheet" href="assets/css/alipes-responsive-rtl.css" />
 	<link rel="stylesheet" href="assets/css/alipes-custom-rtl.css" />
+	<link rel="stylesheet" href="assets/css/improvements.css" />
 
 	<link rel="stylesheet" href="assets/vendors/layerdrops-toolbar/css/layerdrops-toolbar.css">
 <!-- Noto Sans Arabic CDN -->
@@ -277,13 +278,8 @@
                     <span class="section-title__tagline mt-5">بيانات التواصل</span>
                 </div>
                 <div class="contact-page__inner">
-					<form action="https://formsubmit.co/info@thahab.sa" method="POST" class="contact-page__form contact-form-validated">
-						<!-- FormSubmit Configuration -->
-						<input type="hidden" name="_subject" value="طلب خدمة التطوير والتنفيذ - ذهب كابيتال">
-						<input type="hidden" name="_captcha" value="false">
-						<input type="hidden" name="_template" value="table">
-						<input type="text" name="_honey" style="display:none">
-
+                    <!-- <form action="assets/inc/sendemail.php" class="contact-page__form contact-form-validated" -->
+                        <!-- novalidate="novalidate"> -->
 						<div class="row" style="direction: rtl;">
 
 							<!-- الاسم الأول -->
@@ -291,7 +287,7 @@
 							  <label class="mb-4" style="font-weight: bold; display: block;">الاسم الأول</label>
 							  <div class="contact-page__input-box" style="position: relative;">
 								<i class="fas fa-user" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #c68c53;"></i>
-								<input type="text"  name="first-name" style="padding-left: 35px; width: 100%;" required>
+								<input type="text"  name="first-name" style="padding-left: 35px; width: 100%;">
 							  </div>
 							</div>
 						  
@@ -309,7 +305,7 @@
 							  <label class="mb-4" style="font-weight: bold; display: block;">رقم الهاتف</label>
 							  <div class="contact-page__input-box" style="position: relative;">
 								<i class="fas fa-phone" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #c68c53;"></i>
-								<input type="tel"  name="phone" style="padding-left: 35px; width: 100%;" required>
+								<input type="text"  name="phone" style="padding-left: 35px; width: 100%;">
 							  </div>
 							</div>
 						  
@@ -318,7 +314,7 @@
 							  <label class="mb-4" style="font-weight: bold; display: block;">البريد الإلكتروني</label>
 							  <div class="contact-page__input-box" style="position: relative;">
 								<i class="fas fa-envelope" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #c68c53;"></i>
-								<input type="email" name="email" style="padding-left: 35px; width: 100%;" required>
+								<input type="email" name="email" style="padding-left: 35px; width: 100%;">
 							  </div>
 							</div>
 						  
@@ -355,17 +351,18 @@
 							 
 						  
 						  </div>
-
-
+						  
                        <div class="row">
 							<div class="col-12" style="text-align: left; margin-top: 20px;">
-									<button type="submit" style="background-color: #002c5f; color: white; padding: 10px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
-										إرسال الطلب
-										<i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
+								<a href="develop3.html">
+
+									<button style="background-color: #002c5f; color: white; padding: 10px 30px; border: none; border-radius: 5px; font-weight: bold;">
+										الخطوة التالية
+										<i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
 									</button>
+								</a>
 							  </div>
                         </div>
-					</form>
                     <!-- </form> -->
                 </div>
             </div>

@@ -1,0 +1,212 @@
+/**
+ * UI/UX Improvements - Spacing Standardization
+ * Thahab Capital Real Estate Development
+ *
+ * This file standardizes spacing across all sections using an 8px grid system
+ * Load this after main stylesheets for proper cascading
+ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ============================================ */
+:root {
+  /* Spacing Scale - Based on 8px Grid System */
+  --spacing-xs: 0.5rem;      /* 8px */
+  --spacing-sm: 1rem;         /* 16px */
+  --spacing-md: 1.5rem;       /* 24px */
+  --spacing-lg: 2rem;         /* 32px */
+  --spacing-xl: 3rem;         /* 48px */
+  --spacing-2xl: 4rem;        /* 64px */
+  --spacing-3xl: 5rem;        /* 80px */
+  --spacing-4xl: 6rem;        /* 96px */
+  --spacing-5xl: 8rem;        /* 128px */
+
+  /* Section Spacing - Standardized Values */
+  --section-padding-top: 5rem;       /* 80px */
+  --section-padding-bottom: 5rem;    /* 80px */
+  --section-padding-top-lg: 6rem;    /* 96px */
+  --section-padding-bottom-lg: 6rem; /* 96px */
+
+  /* Element Spacing */
+  --element-margin: 2rem;            /* 32px */
+  --element-margin-sm: 1rem;         /* 16px */
+}
+
+/* ============================================
+   SECTION PADDING STANDARDIZATION
+   ============================================ */
+
+/* Hero Section (Main Slider) */
+.main-slider {
+  /* Hero sections typically don't need extra padding */
+}
+
+/* About Section */
+.about-one {
+  padding-top: var(--section-padding-top-lg);
+  padding-bottom: var(--section-padding-bottom-lg);
+}
+
+/* Counter Section */
+.counter-one {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* Why Choose Section */
+.why-choose-one {
+  padding-top: var(--section-padding-top-lg);
+  padding-bottom: var(--section-padding-bottom-lg);
+}
+
+/* Brand Section */
+.brand-one {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* Apartment/Projects Section */
+.apartment-one {
+  padding-top: var(--section-padding-top-lg);
+  padding-bottom: var(--section-padding-bottom-lg);
+}
+
+/* Gallery Section */
+.gallery-one {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* Testimonial Section */
+.testimonial-one {
+  padding-top: var(--section-padding-top-lg);
+  padding-bottom: var(--section-padding-bottom-lg);
+}
+
+/* News Section */
+.news-one {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* Contact Section */
+.contact-one {
+  padding-top: var(--section-padding-top-lg);
+  padding-bottom: var(--section-padding-bottom-lg);
+}
+
+/* Google Map Section */
+.google-map {
+  /* Maps typically don't need padding adjustments */
+}
+
+/* Footer */
+.site-footer {
+  padding-top: var(--section-padding-top-lg);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* ============================================
+   UTILITY CLASSES FOR SPACING
+   ============================================ */
+
+/* Margin Top Utilities */
+.mt-0 { margin-top: 0 !important; }
+.mt-xs { margin-top: var(--spacing-xs) !important; }
+.mt-sm { margin-top: var(--spacing-sm) !important; }
+.mt-md { margin-top: var(--spacing-md) !important; }
+.mt-lg { margin-top: var(--spacing-lg) !important; }
+.mt-xl { margin-top: var(--spacing-xl) !important; }
+.mt-2xl { margin-top: var(--spacing-2xl) !important; }
+.mt-3xl { margin-top: var(--spacing-3xl) !important; }
+.mt-4xl { margin-top: var(--spacing-4xl) !important; }
+.mt-5xl { margin-top: var(--spacing-5xl) !important; }
+
+/* Margin Bottom Utilities */
+.mb-0 { margin-bottom: 0 !important; }
+.mb-xs { margin-bottom: var(--spacing-xs) !important; }
+.mb-sm { margin-bottom: var(--spacing-sm) !important; }
+.mb-md { margin-bottom: var(--spacing-md) !important; }
+.mb-lg { margin-bottom: var(--spacing-lg) !important; }
+.mb-xl { margin-bottom: var(--spacing-xl) !important; }
+.mb-2xl { margin-bottom: var(--spacing-2xl) !important; }
+.mb-3xl { margin-bottom: var(--spacing-3xl) !important; }
+.mb-4xl { margin-bottom: var(--spacing-4xl) !important; }
+.mb-5xl { margin-bottom: var(--spacing-5xl) !important; }
+
+/* Padding Top Utilities */
+.pt-0 { padding-top: 0 !important; }
+.pt-xs { padding-top: var(--spacing-xs) !important; }
+.pt-sm { padding-top: var(--spacing-sm) !important; }
+.pt-md { padding-top: var(--spacing-md) !important; }
+.pt-lg { padding-top: var(--spacing-lg) !important; }
+.pt-xl { padding-top: var(--spacing-xl) !important; }
+.pt-2xl { padding-top: var(--spacing-2xl) !important; }
+.pt-3xl { padding-top: var(--spacing-3xl) !important; }
+.pt-4xl { padding-top: var(--spacing-4xl) !important; }
+.pt-5xl { padding-top: var(--spacing-5xl) !important; }
+
+/* Padding Bottom Utilities */
+.pb-0 { padding-bottom: 0 !important; }
+.pb-xs { padding-bottom: var(--spacing-xs) !important; }
+.pb-sm { padding-bottom: var(--spacing-sm) !important; }
+.pb-md { padding-bottom: var(--spacing-md) !important; }
+.pb-lg { padding-bottom: var(--spacing-lg) !important; }
+.pb-xl { padding-bottom: var(--spacing-xl) !important; }
+.pb-2xl { padding-bottom: var(--spacing-2xl) !important; }
+.pb-3xl { padding-bottom: var(--spacing-3xl) !important; }
+.pb-4xl { padding-bottom: var(--spacing-4xl) !important; }
+.pb-5xl { padding-bottom: var(--spacing-5xl) !important; }
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Tablet and Below */
+@media (max-width: 991px) {
+  :root {
+    --section-padding-top: 4rem;       /* 64px */
+    --section-padding-bottom: 4rem;    /* 64px */
+    --section-padding-top-lg: 5rem;    /* 80px */
+    --section-padding-bottom-lg: 5rem; /* 80px */
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --section-padding-top: 3rem;       /* 48px */
+    --section-padding-bottom: 3rem;    /* 48px */
+    --section-padding-top-lg: 4rem;    /* 64px */
+    --section-padding-bottom-lg: 4rem; /* 64px */
+  }
+}
+
+/* ============================================
+   SPECIFIC FIXES FOR KNOWN ISSUES
+   ============================================ */
+
+/* Ensure sections don't have excessive top margins */
+section {
+  margin-top: 0;
+}
+
+/* Fix contact section that might have mt-5 class */
+.contact-one.mt-5 {
+  margin-top: 0 !important;
+  padding-top: var(--section-padding-top-lg);
+}
+
+/* Ensure consistent section title margins */
+.section-title {
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Standardize card spacing in projects section */
+.apartment-one .row {
+  margin-bottom: 0;
+}
+
+.apartment-one__single {
+  margin-bottom: var(--spacing-lg);
+}
