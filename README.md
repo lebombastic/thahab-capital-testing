@@ -4,41 +4,40 @@ Official website for Thahab Capital (ذهب كابيتال للتطوير الع
 
 ## 🏗️ Project Overview
 
-This is a static HTML website showcasing Thahab Capital's real estate projects, services, and company information. The website is fully RTL (right-to-left) optimized for Arabic content.
+This is a responsive HTML website showcasing Thahab Capital's real estate projects, services, and company information. The website is fully RTL (right-to-left) optimized for Arabic content with modern design elements.
 
 ## 🌐 Live Demo
 
 **Production:** https://thahab-capital-testing-eic2.vercel.app/
-
 **GitHub Repository:** https://github.com/lebombastic/thahab-capital-testing
 
-## ✨ Features
+## ✨ Key Features
 
-- **RTL Support**: Full right-to-left layout for Arabic content
-- **Responsive Design**: Mobile-first approach with Bootstrap 5
-- **Interactive Elements**: Sliders, carousels, animations
-- **Project Showcase**: Aura, Mansouriya, Asela, Ajwaa Park projects
-- **Contact Integration**: Contact forms and Google Maps integration
-- **Social Media**: Integrated social media links
+- **Full RTL Support**: Right-to-left layout optimized for Arabic content
+- **Responsive Design**: Mobile-first approach with Bootstrap grid system
+- **YouTube Video Backgrounds**: Auto-playing video backgrounds with proper controls
+- **Modern Slider Design**: Clean testimonial carousel with two-column layouts
+- **Interactive Elements**: Smooth animations, hover effects, and transitions
+- **Project Showcase**: Detailed presentation of Aura, Mansouriya, Asela, Ajwaa Park
+- **Contact Integration**: Forms and Google Maps integration
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
 
-## 📄 Pages
+## 📄 Website Pages
 
-- **index.html** - Homepage with hero slider and main sections
-- **about-us.html** - Company information
-- **projects.html** - Projects listing
-- **develop2.html** - Real estate development services
-- **contactus.html** - Contact page
-- **Auora.html** - Aura project details
+- **index.html** - Homepage with hero slider, services, and testimonials
+- **about-us.html** - Company information and leadership
+- **projects.html** - Complete projects portfolio
+- **develop.html/develop2-4.html** - Development services and processes
+- **contactus.html/contact.html** - Contact forms and office information
+- **management.html/management3-4.html** - Management and team pages
+- **Auora.html** - Aura project detailed showcase
 
 ## 🚀 Quick Start
 
 ### Local Development
-
-Serve the website using any static server:
-
 ```bash
-# Using Python
-python -m http.server 8000
+# Using Python (Recommended)
+python3 -m http.server 8000
 
 # Using Node.js
 npx serve .
@@ -49,73 +48,120 @@ php -S localhost:8000
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-### Deployment to Vercel
-
-1. **Install Vercel CLI** (if not already installed):
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **Deploy**:
-   ```bash
-   vercel
-   ```
-
-3. **Production deployment**:
-   ```bash
-   vercel --prod
-   ```
-
-Or simply push to GitHub and connect your repository to Vercel for automatic deployments.
+### Deployment
+The site is configured for automatic deployment via Vercel. Push to main branch triggers deployment.
 
 ## 📁 Project Structure
 
 ```
-dev/
-├── index.html              # Homepage
-├── about-us.html          # About page
-├── projects.html          # Projects listing
-├── contactus.html         # Contact page
-├── develop2.html          # Development page
-├── Auora.html            # Aura project details
+thahab-capital-testing/
+├── index.html                    # Main homepage
+├── about-us.html                # About page
+├── projects.html                # Projects showcase
+├── contactus.html               # Contact page
+├── develop*.html                # Development pages
+├── management*.html             # Management pages
+├── Auora.html                   # Aura project details
 ├── assets/
-│   ├── css/              # Stylesheets (RTL versions)
-│   ├── js/               # JavaScript files
-│   ├── images/           # Images and resources
-│   └── vendors/          # Third-party libraries
-├── vercel.json           # Vercel configuration
-├── CLAUDE.md             # Development guide
-└── README.md             # This file
+│   ├── css/
+│   │   ├── alipes-rtl.css      # Main RTL styles
+│   │   ├── alipes-responsive-rtl.css
+│   │   └── improvements.css     # Custom enhancements
+│   ├── images/                  # All project images
+│   │   ├── backgrounds/         # Hero backgrounds
+│   │   ├── resources/           # General resources
+│   │   ├── about-us/           # About page images
+│   │   └── brand/              # Brand assets
+│   ├── js/
+│   │   └── alipes.js           # Main JavaScript
+│   └── vendors/                # Third-party libraries
+├── vercel.json                 # Vercel deployment config
+└── README.md                   # This file
 ```
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies & Libraries
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom styles with RTL support
-- **Bootstrap 5** - CSS framework
-- **jQuery** - DOM manipulation
-- **Swiper.js** - Image sliders
-- **Owl Carousel** - Carousels
-- **WOW.js** - Scroll animations
+- **HTML5** - Semantic markup with RTL support
+- **CSS3** - Custom styles with Flexbox and Grid
+- **Bootstrap 5** - Responsive grid system
+- **jQuery** - DOM manipulation and events
+- **Owl Carousel** - Image sliders and testimonials
+- **WOW.js** - Scroll-triggered animations
+- **Font Awesome** - Icon library
+- **Cairo Font** - Arabic typography
+
+## 🎨 Recent Updates (Latest Commit: 5218fa1)
+
+### YouTube Video Background Implementation
+- Added auto-playing YouTube video backgrounds to hero sections
+- Implemented proper video controls, muting, and looping
+- Responsive video scaling with overlay effects
+
+### Testimonial Section Redesign
+- Converted from traditional carousel to modern slider design
+- Two-column layout: content on one side, full-width images on the other
+- Alternating layout per slide (left/right content positioning)
+- Enhanced typography with proper Arabic text rendering
+- Mobile-responsive with adaptive layouts
+
+### CSS Enhancements
+- Added `improvements.css` for custom styling overrides
+- Implemented modern button designs with hover effects
+- Enhanced spacing and typography throughout
+- Better mobile responsiveness across all components
+
+## 🔧 Development Guidelines
+
+### Working on This Project
+1. **Local Setup**: Always use `python3 -m http.server 8000` for local development
+2. **File Organization**: Keep all custom CSS in `assets/css/improvements.css`
+3. **Responsive Design**: Test on multiple screen sizes (mobile-first approach)
+4. **RTL Support**: Ensure all new components work properly with Arabic text
+5. **Image Optimization**: Compress images and use appropriate formats (WebP preferred)
+
+### Code Standards
+- Use semantic HTML5 elements
+- Follow existing naming conventions for CSS classes
+- Comment complex JavaScript functionality
+- Maintain Bootstrap grid system consistency
+- Test cross-browser compatibility (Chrome, Safari, Firefox, Edge)
+
+### Git Workflow
+```bash
+# Check status
+git status
+
+# Add changes
+git add .
+
+# Commit with descriptive message
+git commit -m "Brief description of changes"
+
+# Push to GitHub
+git push origin main
+```
 
 ## 📞 Contact Information
 
+**Thahab Capital العقارية**
 - **Email**: info@thahab.sa
 - **Phone**: +966 0112250555
 - **Riyadh Office**: Exit 2, Hittin District, Robin Plaza Building
 - **Jeddah Office**: Sari Street, Business Tower
 
-## 📱 Social Media
+## 📱 Social Media Links
 
 - [Twitter/X](https://x.com/thahabcapital?s=21)
 - [Facebook](https://www.facebook.com/share/18f9hcLdQA/?mibextid=wwXIfr)
 - [TikTok](https://www.tiktok.com/@thahabcapital?_t=ZS-8t7bNF4Nche&_r=1)
 - [Instagram](https://www.instagram.com/thahab.capital/profilecard/?igsh=dHEyYnZtY3UzdXBs)
 
-## 📝 License
+## 📝 License & Copyright
 
-© 2025 Thahab Capital Real Estate. All rights reserved.
+© 2025 Thahab Capital Real Estate Development Company. All rights reserved.
 
-## 🔧 Development
+---
 
-For detailed development information, see [CLAUDE.md](CLAUDE.md).
+**Last Updated**: October 2025  
+**Version**: 2.1  
+**Maintainer**: Development Team
